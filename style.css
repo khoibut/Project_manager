@@ -1,0 +1,266 @@
+*{  
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar-top{
+    background-color:rgb(165, 165, 165);
+    height: 30px;
+    border-radius: 10px;
+    padding: 0;
+    position: relative;
+}
+.navbar-top a {
+    position: absolute;
+    text-decoration: none;
+    font-size:20px;
+    color: white;
+    width: 80px;
+    height: 100%;
+    text-align: center;
+    padding: 4px 0;
+}
+
+.navbar-top .fa-house{
+    color: white;
+    position: absolute;
+    left: 70px;
+    top: 7px;
+    font-size: 15px;
+}
+
+.navbar-top .Setting {
+     position: absolute;
+     right: 15px;
+     text-align: right;
+}
+
+.navbar-top .History{
+    left: 100px;
+    position: absolute;
+}
+
+.navbar-top a:hover{
+    color: rgb(69, 246, 243);
+}
+
+.create-newproject{
+    position: relative;
+    outline: none;
+    height: 95vh;
+    background: none;
+}
+
+.create-newproject .button-create-newproject{
+    position: absolute;
+    background: none;
+    color: rgb(133, 129, 129);
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%) translateY(-50%);
+    border:2px solid rgb(133, 129, 129);
+    cursor: pointer;
+    box-shadow: 0px 0px 20px 2px black;
+}
+
+.create-newproject .button-create-newproject:hover{
+    color:rgb(69, 246, 243);
+    border: 2px solid rgb(69, 246, 243);
+    box-shadow: 0px 0px 20px 6px rgb(49, 204, 235);
+}
+
+.button-create-newproject .fa-thin{
+    font-size: 100px;
+}
+
+.create-newproject .create-title{
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+}
+
+.window-create-new-project{
+    position: fixed;
+    width: 35%;
+    min-height: 50%;
+    background-color: rgb(147, 135, 135);
+    top: 50%;
+    left: 50%; 
+    transform: translateX(-50%) translateY(-50%);
+    border: 2px solid rgb(74, 72, 72);
+    box-shadow: -11px 6px 10px 2px #333;
+    color: rgb(69, 246, 243);
+    padding:0 8px;
+    display: none;
+}
+
+.window-create-new-project h3{
+    text-align: center;
+    font-size: 24px;
+}
+.window-create-new-project .button-close-window-create-project{
+    outline:none;
+    background: none;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 3px;
+    font-size: 24px;
+    color: rgb(69, 246, 243);
+    cursor: pointer;
+}
+
+.window-create-new-project .project-name{
+    width: 100%;
+    height: 30px;
+    border: 1px solid rgb(69, 246, 243);
+    border-radius: 20px;
+    margin:10px 0;
+    background: none;
+    color: rgb(69, 246, 243);
+    padding: 0 10px;
+}
+
+.window-create-new-project .project-name:focus{
+    outline: none;
+    border-color: rgb(69, 246, 243);
+}
+
+.window-create-new-project .place-holder{
+    position: absolute;
+    left: 18px;
+    top: 42px;
+    font-size: 16px;
+    background: transparent;
+    pointer-events: none;
+    transition: 0.5s;
+    color: rgb(69, 246, 243);
+}
+.window-create-new-project input:valid ~ label,
+.window-create-new-project input:focus ~ label
+{
+    font-size:12px;
+    transform: translateY(-20px);
+}
+
+.window-create-new-project .add-detail{
+    margin-top:20px;
+}
+
+.add-detail .add-link{
+    width:100%;
+    background: none;
+    border: 2px solid rgb(69, 246, 243);
+    border-radius: 20px;
+    padding:0 26px;
+    color: rgb(69, 246, 243);
+}
+
+.add-detail .add-link:focus{
+    outline: none;
+    border-color: rgb(69, 246, 243);
+}
+
+.add-detail .add-picture{
+    border:2px dashed rgb(69, 246, 243);
+    width:100%;
+    height:130px;
+    margin:10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    align-items: center;
+    row-gap: 5px;
+}
+
+.add-detail .title-add-link{
+    position:absolute;
+    top: 80px;
+    left:12px;
+    font-size:14px;
+}
+
+.window-create-new-project .fa-link{
+    color: rgb(69, 246, 243);
+    font-size: 14px;
+    position: absolute;
+    left:16px;
+    top:102px;
+}
+
+.add-picture .guide-add-picture{
+    font-size:16px;
+}
+
+.add-picture button{
+    background-color: rgb(69, 246, 243);
+    width:90px;
+    height:30px;
+    cursor: pointer;
+}
+
+.add-picture button:hover{
+    box-shadow: 0px 0px 7px 1px #41e5d9;
+}
+
+.window-create-new-project .create-submit{
+    position: absolute;
+    left: 50%;
+    bottom:15px;
+    transform: translateX(-50%);
+    font-size: 20px;
+    cursor: pointer;
+    padding:3px 5px;
+    color: black;
+    background-color: rgb(69, 246, 243);
+    box-shadow: 0px 0px 12px 0px #242323;
+}
+
+.window-create-new-project .create-submit:hover{
+    color: black;
+    background-color: rgb(119, 245, 110);
+    box-shadow: 0px 0px 12px 1px #2df41b;
+}
+
+.window-history{
+    position: fixed;
+    width:750px;
+    height:80vh;
+    background-color: #ABF9F9;
+    top:10%;
+    left:40px;
+    border:2px solid black;
+    
+}
+
+.window-history .project{
+    width:80%;
+    height:40px;
+    background-color: white;
+    margin:100px 20px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.project .add-moment{
+    background-color: gray;
+    border: 2px solid black;
+    height: 100%;
+    width:20%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+}
+
+

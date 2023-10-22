@@ -3,11 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>PROJECT_MANAGER</title>
     <link href="normalize.css" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/aec91c62eb.js" crossorigin="anonymous"></script>
+    <script src="projectWindow.js" defer></script>
 </head>
 <body>
+    <div class="navbar-top">
+        <a href="#" class="Home">
+            Home
+        </a>
+        <i class="fa-solid fa-house" ></i>
+        <a href="#" class="History">
+            History
+        </a>
+        <a href="#" class="Setting">
+            <i class="fa-solid fa-gear" class="Setting-icon"></i>
+        </a>
+    </div>   
+    <div class="create-newproject">
+        <h3 class="create-title">CREATE NEW PROJECT</h3>
+        <button class="button-create-newproject"><i class="fa-thin fa-plus"></i></button>
+    </div>
+    <div class="window-create-new-project">
+        <h3 class="new-project">New Project</h3>
+        <button class="button-close-window-create-project"><i class="fa-solid fa-xmark close-window-create-project"></i></button>
+        <input type="text" class="project-name"  required>
+        <div class="add-detail">
+            <input type="url" class="add-link" required>
+            <span class="title-add-link">Your Project-link:</span>
+            <i class="fa-solid fa-link"></i>
+            <div class="add-picture">
+                <h5 class="guide-add-picture">Drag & Drop to Upload Images</h5>
+                <span>Or</span>
+                <button>Select file</button>
+                <input type="file" hidden>
+            </div>
+        </div>
+        <button type="submit" class="create-submit">Create</button>
+    </div>
     
+    <div class="window-history">
+        <div class="title-window-history">
+        <h4 class="title-history">History</h4>
+        <button class="button-close-window-history"><i class="fa-solid fa-xmark close-window-history"></i></button>
+        </div>
+        <div class="search">
+            <input type="text" class="search" placeholder="search">
+        </div>
+        <template data-project-template>
+            <div class="project">
+                <span class="add-moment">Time</span>
+                <span class="project-name">Project name</span>
+                <button class="share"><i class="fa-solid fa-share"></i></button>
+                <button class="edit"><i class="fa-solid fa-pencil"></i></button>
+                <button class="delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </template>
+        <div class="window-history-create-new-project">
+        </div>
+    </div>    
 </body>
 </html>
