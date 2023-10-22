@@ -8,7 +8,6 @@
     <link href="style.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/aec91c62eb.js" crossorigin="anonymous"></script>
     <script src="projectWindow.js" defer></script>
-    <script src="submit.js" defer></script>
 </head>
 <body>
     <div class="navbar-top">
@@ -44,6 +43,7 @@
         </div>
         <button type="submit" class="create-submit">Create</button>
     </div>
+    
     <div class="window-history">
         <div class="title-window-history">
         <h4 class="title-history">History</h4>
@@ -52,13 +52,15 @@
         <div class="search">
             <input type="text" class="search" placeholder="search">
         </div>
-        <div class="project">
-            <span class="add-moment">Time</span>
-            <span class="project-name">Project name</span>
-            <button class="share"><i class="fa-solid fa-share"></i></button>
-            <button class="edit"><i class="fa-solid fa-pencil"></i></button>
-            <button class="delete"><i class="fa-solid fa-trash"></i></button>
-        </div>
+        <template data-project-template>
+            <div class="project">
+                <span class="add-moment">Time</span>
+                <span class="project-name">Project name</span>
+                <button class="share"><i class="fa-solid fa-share"></i></button>
+                <button class="edit"><i class="fa-solid fa-pencil"></i></button>
+                <button class="delete"><i class="fa-solid fa-trash"></i></button>
+            </div>
+        </template>
         <div class="window-history-create-new-project">
         </div>
     </div>    
