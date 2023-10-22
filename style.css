@@ -97,6 +97,7 @@
     box-shadow: -11px 6px 10px 2px #333;
     color: rgb(69, 246, 243);
     padding:0 8px;
+    display: none;
 }
 
 .window-create-new-project h3{
@@ -120,11 +121,15 @@
     height: 30px;
     border: 1px solid rgb(69, 246, 243);
     border-radius: 20px;
-    border-top: none;
     margin:10px 0;
     background: none;
     color: rgb(69, 246, 243);
     padding: 0 10px;
+}
+
+.window-create-new-project .project-name:focus{
+    outline: none;
+    border-color: rgb(69, 246, 243);
 }
 
 .window-create-new-project .place-holder{
@@ -155,6 +160,11 @@
     border-radius: 20px;
     padding:0 26px;
     color: rgb(69, 246, 243);
+}
+
+.add-detail .add-link:focus{
+    outline: none;
+    border-color: rgb(69, 246, 243);
 }
 
 .add-detail .add-picture{
@@ -209,6 +219,48 @@
     font-size: 20px;
     cursor: pointer;
     padding:3px 5px;
-    background-color: rgb(18, 227, 210);
+    color: black;
+    background-color: rgb(69, 246, 243);
+    box-shadow: 0px 0px 12px 0px #242323;
+}
+
+.window-create-new-project .create-submit:hover{
+    color: black;
+    background-color: rgb(119, 245, 110);
+    box-shadow: 0px 0px 12px 1px #2df41b;
+}
+
+.window-history{
+    position: fixed;
+    width:750px;
+    height:80vh;
+    background-color: #ABF9F9;
+    top:10%;
+    left:40px;
+    border:2px solid black;
     
 }
+
+.window-history .project{
+    width:80%;
+    height:40px;
+    background-color: white;
+    margin:100px 20px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.project .add-moment{
+    background-color: gray;
+    border: 2px solid black;
+    height: 100%;
+    width:20%;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    text-align: center;
+}
+
+
