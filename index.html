@@ -9,6 +9,8 @@
     <script src="https://kit.fontawesome.com/aec91c62eb.js" crossorigin="anonymous"></script>
     <script src="projectWindow.js" defer></script>
     <script src="historyWindow.js" defer></script>
+    <script src="dragWindows.js" defer></script>
+    <script src="windows.js" defer></script>
 </head>
 <body>
     <div class="navbar-top">
@@ -27,8 +29,8 @@
         <h3 class="create-title">CREATE NEW PROJECT</h3>
         <button class="button-create-newproject"><i class="fa-thin fa-plus"></i></button>
     </div>
-    <div class="window-create-new-project">
-        <h3 class="new-project">New Project</h3>
+    <div class="window-create-new-project" data-window>
+        <h3 class="new-project" data-header>New Project</h3>
         <button class="button-close-window-create-project"><i class="fa-solid fa-xmark close-window-create-project"></i></button>
         <input type="text" class="project-name"  required>
         <label class="place-holder">Project Name</label>
@@ -45,8 +47,8 @@
         </div>
         <button type="submit" class="create-submit">Create</button>
     </div>
-    <div class="window-history">
-        <div class="title-window-history">
+    <div class="window-history" data-window>
+        <div class="title-window-history" data-header>
         <h4 class="title-history">HISTORY</h4>
         <button class="button-close-window-history"><i class="fa-solid fa-xmark close-window-history"></i></button>
         </div>

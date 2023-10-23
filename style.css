@@ -3,9 +3,10 @@
     padding:0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
 }
 body{
-    overflow: none;
+    overflow: hidden;
 }
 
 .navbar-top{
@@ -92,12 +93,11 @@ body{
 }
 
 .window-create-new-project{
-    position: fixed;
+    position: absolute;
     width: 35%;
     background-color: rgb(147, 135, 135);
-    top: 50%;
-    left: 50%; 
-    transform: translateX(-50%) translateY(-50%);
+    top: 23%;
+    left: 32%; 
     border: 0.2vw solid rgb(74, 72, 72);
     box-shadow: -0.9vw 0.7vw 1vw 0.4vw #333;
     color: rgb(69, 246, 243);
@@ -236,8 +236,8 @@ body{
 }
 
 .window-history{
-    display: grid;
-    position: fixed;
+    display:none;
+    position: absolute;
     width:60%;
     background-color: #ABF9F9;
     top:10%;
