@@ -131,7 +131,6 @@ body{
     color: rgb(69, 246, 243);
     padding: 0.4vw 1.3vw;
 }
-
 .window-create-new-project .project-name:focus{
     outline: none;
     border-color: rgb(69, 246, 243);
@@ -162,8 +161,10 @@ body{
     width:100%;
     background: none;
     border: 0.2vw solid rgb(69, 246, 243);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 7%;
     border-radius: 2vw;
-    padding:0 2vw;
     color: rgb(69, 246, 243);
 }
 
