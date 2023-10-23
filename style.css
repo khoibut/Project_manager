@@ -233,12 +233,11 @@
 .window-history{
     display: grid;
     position: fixed;
-    width:750px;
-    height:80vh;
+    width:54%;
     background-color: #ABF9F9;
     top:10%;
-    left:40px;
-    border:2px solid gray;
+    left:2%;
+    border: 0.2vw solid gray;
     grid-template-rows: 10vh 9vh 3.5vh 55.5vh;
 }
 
@@ -379,7 +378,6 @@
 
 .window-history .project{
     width:90%;
-    height:40px;
     background-color: white;
     margin:10px 20px;
     padding: 0;
@@ -393,7 +391,6 @@
 .project .add-moment{
     background-color: #dcd9d9;
     border-right:1px solid black;
-    height: 100%;
     width: 140px;
     border-top-left-radius: 14px;
     border-bottom-left-radius: 14px;
