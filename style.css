@@ -1,18 +1,22 @@
 *{  
-    margin:0;
-    padding:0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
 }
 body{
-    overflow: none;
+    overflow: hidden;
 }
 
 .navbar-top{
     background-color:rgb(165, 165, 165);
-    border-radius: 3vw;
-    padding: 0.5% 1%;
-    position: relative;
+    border-top-right-radius: 3vw;
+    border-bottom-right-radius:3vw;
+    padding: 0.3% 6% 0.3% 2%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    width:20%;
+    margin-right: 74.05vw;
 }
 .navbar-top a {
     text-decoration: none;
@@ -20,30 +24,43 @@ body{
     color: white;
     width: 10%;
     text-align: center;
-    padding: 0 0;
+    margin-right: 4vw;
 }
-
 .navbar-top .fa-house{
     color: white;
-    position: absolute;
-    left: 6.7%;
-    top: 50%;
-    font-size: 1.6vw;
-    transform: translateY(-50%);
+    font-size: 1.4vw;
+    padding:0 0.4vw;
+    width: 1,4vw;
+    margin-right:2vw;
 }
-
-.navbar-top .Setting {
-     position: absolute;
-     right: 2%;
-     text-align: right;
-}
-
 .navbar-top .History{
-    left: 8%;
-    position: absolute;
+    margin-right: 1vw;
 }
+
+.nav-bar-setting  {
+    display: inline;
+    max-width:5%;
+    text-align: center;
+    background-color: rgb(165, 165, 165);
+    border-top-left-radius: 3vw;
+    border-bottom-left-radius:3vw;
+    padding: 1.38% 1.6% 0.5% 2%;
+}
+
+.nav-bar-setting a{
+    text-decoration: none;
+    font-size:2vw;
+    color: white;
+    width: 10%;
+    text-align: center;
+}
+
 
 .navbar-top a:hover{
+    color: rgb(69, 246, 243);
+}
+
+.nav-bar-setting a:hover{
     color: rgb(69, 246, 243);
 }
 
@@ -92,12 +109,11 @@ body{
 }
 
 .window-create-new-project{
-    position: fixed;
+    position: absolute;
     width: 35%;
     background-color: rgb(147, 135, 135);
-    top: 50%;
-    left: 50%; 
-    transform: translateX(-50%) translateY(-50%);
+    top: 23%;
+    left: 32%; 
     border: 0.2vw solid rgb(74, 72, 72);
     box-shadow: -0.9vw 0.7vw 1vw 0.4vw #333;
     color: rgb(69, 246, 243);
@@ -236,8 +252,8 @@ body{
 }
 
 .window-history{
-    display: grid;
-    position: fixed;
+    display:none;
+    position: absolute;
     width:60%;
     background-color: #ABF9F9;
     top:10%;
@@ -269,6 +285,7 @@ body{
 }
 .button-close-window-history i{
     font-size: 2vw;
+    width:2vw;
 }
 
 .button-close-window-history i:hover{
@@ -324,49 +341,18 @@ body{
     cursor:pointer;
     position: absolute;
     right:2%;
+    
 }
 
 .window-history-button-create i{
-    font-size:1.7vw;
+    font-size:2vw;
     justify-self: right;
+    width:2vw;
 }
 
 .window-history-button-create i:hover{
     background-color: rgba(128, 128, 128, 0.299);
     border-radius: 50%;
-}
-
-.window-history .drop-down-sort{
-    position: relative;
-    display: inline-block;
-    background-color: #dcd9d9;
-    height:100%;
-    width:100px;
-    margin-left: 2%;
-    color:black;
-    text-align: center;
-    border:1px solid black;
-    border-top: none;
-    cursor: pointer;
-    padding:0.3vh 0;
-}
-
-.drop-down-sort i{
-    position: absolute;
-    font-size: 20px;
-}
-.drop-down-sort .drop-down-sort-items {
-    position: absolute;
-    background-color: #dcd9d9;
-    width: 100%;
-    height:3.5vh;
-    z-index: 1;
-    font-size: 16px;
-    text-align: center;
-    border: 1px solid black;
-    border-top: none;
-    cursor: pointer;
-    padding:0.4vh 0;
 }
 
 .window-history .project{
@@ -427,5 +413,7 @@ body{
     text-decoration: underline #2878f0;
     color: #2878f0;
 }
+
+
 
 
