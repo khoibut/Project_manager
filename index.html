@@ -31,10 +31,12 @@
         <h3 class="new-project">New Project</h3>
         <button class="button-close-window-create-project"><i class="fa-solid fa-xmark close-window-create-project"></i></button>
         <input type="text" class="project-name"  required>
+        <label class="place-holder">Project Name</label>
         <div class="add-detail">
             <input type="url" class="add-link" required>
+                <i class="fa-solid fa-link"></i>
+            </input>
             <span class="title-add-link">Your Project-link:</span>
-            <i class="fa-solid fa-link"></i>
             <div class="add-picture">
                 <h5 class="guide-add-picture">Drag & Drop to Upload Images</h5>
                 <span>Or</span>
@@ -54,11 +56,10 @@
             <input type="text" class="input-search" placeholder="search">
             <button class="window-history-button-create"><i class="fa-solid fa-plus"></i></button>
         </div>
-        <div class="drop-down-sort">
-            Lastest
-            <i class="fa-solid fa-caret-down"></i>
-            <div class="drop-down-sort-items"><p>Oldest</p></div>
-        </div>
+        <select class="dropdown">
+            <option value="Latest">Latest</option>
+            <option value="Oldest">Oldest</option>
+        </select>
         <div class="project-container">
             <template data-project-template>
                 <div class="project">
