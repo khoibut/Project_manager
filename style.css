@@ -237,11 +237,10 @@ body{
 .window-history{
     display: grid;
     position: fixed;
-    width:750px;
-    height:80vh;
+    width:60%;
     background-color: #ABF9F9;
     top:10%;
-    left:40px;
+    left:2%;
     border:2px solid gray;
     grid-template-rows: 10vh 9vh 3.5vh 55.5vh;
 }
@@ -251,12 +250,12 @@ body{
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    padding:0 16px;
+    padding:0 2%;
     border-bottom: 2px solid gray;
 }
 
 .title-window-history .title-history{
-    font-size:32px;
+    font-size:2vw;
     color: #605E5E;
 }
 
@@ -268,9 +267,7 @@ body{
     cursor: pointer;  
 }
 .button-close-window-history i{
-    width: 30px;
-    height: 30px;
-    font-size: 30px;
+    font-size: 2vw;
 }
 
 .button-close-window-history i:hover{
@@ -281,23 +278,18 @@ body{
 .search{
     width: 100%;
     position: relative;
-    padding:0px 16px;
+    padding:0px 2%;
     border-bottom: 2px solid gray;
     display: flex;
-    flex-direction: row;
-    justify-content: right;
     align-items: center;
 }
 
 .search .icon-search{  
-    height:5vh;
-    width:58px;
+    width:5%;
+    padding-top: 1.25%;
+    padding-bottom: 1.25%;
     background-color: #dcd9d9;
-    position: absolute;
     cursor: pointer;
-    top:50%;
-    left:14px;
-    transform: translateY(-50%);
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
     border: 1px solid #605E5E;
@@ -306,14 +298,11 @@ body{
 }
 
 .search .input-search{
-    position:absolute;
-    top:50%;
-    left:70px;
-    height: 5vh;
-    width:300px;
-    transform: translateY(-50%);
+    padding-top: 1.25%;
+    padding-bottom: 1.25%;
+    padding-left: 1%;
+    width:30%;
     background: none;
-    padding:0 10px;
     border: 1px solid #605E5E;
     color: #605E5E;
     border-top-right-radius: 20px;
@@ -332,12 +321,13 @@ body{
     color: #605E5E;
     background: none;
     cursor:pointer;
+    position: absolute;
+    right:2%;
 }
 
 .window-history-button-create i{
-    height: 30px;
-    width:30px;
-    font-size:30px;
+    font-size:1.7vw;
+    justify-self: right;
 }
 
 .window-history-button-create i:hover{
@@ -351,7 +341,7 @@ body{
     background-color: #dcd9d9;
     height:100%;
     width:100px;
-    margin-left: 25px;
+    margin-left: 2%;
     color:black;
     text-align: center;
     border:1px solid black;
@@ -362,16 +352,13 @@ body{
 
 .drop-down-sort i{
     position: absolute;
-    right:5px;
     font-size: 20px;
 }
 .drop-down-sort .drop-down-sort-items {
     position: absolute;
     background-color: #dcd9d9;
-    width: 100px;
-    top: 3.5vh;
+    width: 100%;
     height:3.5vh;
-    left: -0.5px;
     z-index: 1;
     font-size: 16px;
     text-align: center;
