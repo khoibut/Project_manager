@@ -21,7 +21,7 @@ function editProject(project){
     })
 }
 function submitProject(){
-    historyWindow=document.getElementsByClassName("window-history")[0]
+    historyWindow=document.getElementsByClassName("project-container")[0]
     today=new Date()
     date=today.getFullYear()+'-'+String((today.getMonth()+1)).padStart(2,'0')+'-'+String(today.getDate()).padStart(2,'0')
     projectURL=document.getElementsByClassName("add-link")[0]
