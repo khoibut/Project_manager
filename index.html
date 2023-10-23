@@ -43,25 +43,28 @@
         </div>
         <button type="submit" class="create-submit">Create</button>
     </div>
-    
     <div class="window-history">
         <div class="title-window-history">
-        <h4 class="title-history">History</h4>
+        <h4 class="title-history">HISTORY</h4>
         <button class="button-close-window-history"><i class="fa-solid fa-xmark close-window-history"></i></button>
         </div>
         <div class="search">
-            <input type="text" class="search" placeholder="search">
+            <button class="icon-search" ><i class="fa-solid fa-magnifying-glass"></i></button>
+            <input type="text" class="input-search" placeholder="search">
+            <button class="window-history-button-create"><i class="fa-solid fa-plus"></i></button>
         </div>
-        <template data-project-template>
-            <div class="project">
-                <span class="add-moment">Time</span>
-                <span class="project-name">Project name</span>
-                <button class="share"><i class="fa-solid fa-share"></i></button>
-                <button class="edit"><i class="fa-solid fa-pencil"></i></button>
-                <button class="delete"><i class="fa-solid fa-trash"></i></button>
-            </div>
-        </template>
-        <div class="window-history-create-new-project">
+        <div class="drop-down-sort">
+            Lastest
+            <i class="fa-solid fa-caret-down"></i>
+            <div class="drop-down-sort-items"><p>Oldest</p></div>
+        </div>
+        <div class="project">
+            <div class="add-moment">Time</div>
+            <div class="project-name"><a href="#" class="name">Project name</a></div>
+            <button class="share" ><i class="fa-solid fa-share"></i></button>
+            <button class="edit"><i class="fa-solid fa-pencil"></i></button>
+            <button class="delete"><i class="fa-solid fa-trash"></i></button>
+        </div>
         </div>
     </div>    
 </body>
