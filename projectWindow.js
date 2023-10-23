@@ -1,13 +1,24 @@
-function closeProjectWindow(){
-    document.getElementsByClassName("window-create-new-project")[0].style.display="none"
+function closeProjectWindow(button){
+    button.parentElement.style.display="none"
 }
-function openProjectWindow(){
+function openProjectWindow(button){
     document.querySelector(".new-project").innerHTML="New Project"
     document.getElementsByClassName("window-create-new-project")[0].style.display="block"
 }
 function editProject(project){
     openProjectWindow()
     document.querySelector(".new-project").innerHTML="Edit Project"
+    submitButton.removeEventListener("click",submitProject)
+    submitButton.addEventListener("click",function edit(){
+        if(document.getElementsByClassName("project-name")[0].value!=''){
+            project.querySelector(".project-name").innerHTML=document.getElementsByClassName("project-name")[0].value
+            document.getElementsByClassName("project-name")[0].value=''
+        }
+        if(document.getElementsByClassName("add-link")[0].value!=''){
+        }
+        closeProjectWindow(submitButton)
+        submitButton.removeEventListener("click",edit)
+    })
 }
 function submitProject(){
     historyWindow=document.getElementsByClassName("window-history")[0]
@@ -33,12 +44,13 @@ function submitProject(){
     projectName.value=''
     projectURL.value=''
     historyWindow.appendChild(templateContent)
+    closeProjectWindow(submitButton)
 }
 let closeProjectButton = document.getElementsByClassName("button-close-window-create-project")[0]
-closeProjectButton.addEventListener("click",closeProjectWindow)
+closeProjectButton.addEventListener("click",function(){
+    closeProjectWindow(this)
+})
 let openProjectButton=document.getElementsByClassName("button-create-newproject")[0]
 openProjectButton.addEventListener("click",openProjectWindow)
 let submitButton=document.getElementsByClassName("create-submit")[0];
-submitButton.addEventListener("click",function(){
-    submitProject();
-})
+submitButton.addEventListener("click",submitProject)
