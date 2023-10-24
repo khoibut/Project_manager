@@ -41,7 +41,7 @@ function submitProject(){
         editProject(this.parentElement)
     })
     templateContent.querySelector(".delete").addEventListener("click",function(){
-        this.parentElement.remove()
+        this.parentElement.parentElement.remove()
     })
     projectName.value=''
     projectURL.value=''
@@ -52,7 +52,9 @@ let closeProjectButton = document.getElementsByClassName("button-close-window-cr
 closeProjectButton.addEventListener("click",function(){
     closeProjectWindow(this)
 })
-let openProjectButton=document.getElementsByClassName("button-create-newproject")[0]
-openProjectButton.addEventListener("click",openProjectWindow)
+let openProjectButton=document.querySelectorAll("[data-create]")
+openProjectButton.forEach(function(button){
+    button.addEventListener("click",openProjectWindow)
+})
 let submitButton=document.getElementsByClassName("create-submit")[0];
 submitButton.addEventListener("click",submitProject)
