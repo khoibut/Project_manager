@@ -6,7 +6,7 @@
 body{
     overflow: hidden;
     background-image: url(img/c540018ca1c7b93cb1fbc218ea0c73a7.png);
-    background-repeat:none ;
+    background-repeat:no-repeat ;
     background-size: cover;
 
 }
@@ -126,12 +126,14 @@ body{
 .window-create-new-project{
     position: absolute;
     width: 35%;
-    background-color: rgb(147, 135, 135);
-    top: 23%;
+    background-image: url(img/night-sky-stars-milky-way-4k.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    top: 10%;
     left: 32%; 
-    border: 0.2vw solid rgb(74, 72, 72);
-    box-shadow: -0.9vw 0.7vw 1vw 0.4vw #333;
-    color: rgb(69, 246, 243);
+    border: 0.2vw solid rgb(87, 178, 235);
+    box-shadow: -1vw 1vw 1vw 0.1vw #2cedf4;
+    color: rgb(223, 150, 80);
     padding:0 1vw 4vw 1vw;
     display: none;
 }
@@ -140,6 +142,7 @@ body{
     text-align: center;
     font-size: 2vw;
     margin-top:0.3vw;
+    margin-bottom:0.7vw ;
 }
 .window-create-new-project .button-close-window-create-project{
     outline:none;
@@ -149,22 +152,22 @@ body{
     right: 2%;
     top: 1%;
     font-size: 2vw;
-    color: rgb(69, 246, 243);
+    color: rgb(223, 150, 80);
     cursor: pointer;
 }
 
 .window-create-new-project .project-name{
     width: 100%;
-    border: 0.15vw solid rgb(69, 246, 243);
+    border: 0.15vw solid rgb(223, 150, 80);
     border-radius: 2vw;
-    margin:1vw 0;
+    margin:0.4vw 0;
     background: none;
-    color: rgb(69, 246, 243);
+    color: rgb(223, 150, 80);
     padding: 0.4vw 1.3vw;
 }
 .window-create-new-project .project-name:focus{
     outline: none;
-    border-color: rgb(69, 246, 243);
+    border-color: rgb(223, 150, 80);
 }
 .create-project-name-container{
     display:flex;
@@ -178,7 +181,7 @@ body{
     background: transparent;
     pointer-events: none;
     transition: 0.5s;
-    color: rgb(69, 246, 243);
+    color: rgb(223, 150, 80);
 }
 .window-create-new-project input:valid ~ label,
 .window-create-new-project input:focus ~ label
@@ -194,21 +197,21 @@ body{
 .add-detail .add-link{
     width:100%;
     background: none;
-    border: 0.2vw solid rgb(69, 246, 243);
+    border: 0.2vw solid rgb(223, 150, 80);
     padding-top: 1%;
     padding-bottom: 1%;
-    padding-left: 7%;
+    padding-left: 10%;
     border-radius: 2vw;
-    color: rgb(69, 246, 243);
+    color: rgb(223, 150, 80);
 }
 
 .add-detail .add-link:focus{
     outline: none;
-    border-color: rgb(69, 246, 243);
+    border-color: rgb(223, 150, 80);
 }
 
 .add-detail .add-picture{
-    border:0.25vw dashed rgb(69, 246, 243);
+    border:0.25vw dashed rgb(223, 150, 80);
     width:100%;
     margin:1vw 0;
     display: flex;
@@ -223,14 +226,16 @@ body{
 
 .add-detail .title-add-link{
     font-size:1vw;
+    margin-left: 1vw;
 }
+
 .project-link-container{
     display:flex;
     flex-direction: row;
     align-items: center;
 }
 .window-create-new-project .fa-link{
-    color: rgb(69, 246, 243);
+    color: rgb(223, 150, 80);
     font-size: 1vw;
     position: absolute;
     left:5%;
@@ -238,16 +243,23 @@ body{
 
 .add-picture .guide-add-picture{
     font-size:1.3vw;
+    margin:1vw;
+    margin-bottom: 0.7vw;
 }
 
+.add-picture .choose{
+    font-size: 1.5vw;
+    margin-bottom: 0.7vw;
+}
 .add-picture button{
-    background-color: rgb(69, 246, 243);
-    padding:0.4vw 0.8vw;
+    background-color: rgb(223, 150, 80);
+    padding:0.5vw 0.9vw;
     cursor: pointer;
+    font-size: 1.3vw;
 }
 
 .add-picture button:hover{
-    box-shadow: 0px 0px 1vw 0.2vw #41e5d9;
+    box-shadow: 0px 0px 1vw 0.2vw rgb(236, 132, 34);
 }
 
 .window-create-new-project .create-submit{
@@ -259,14 +271,16 @@ body{
     cursor: pointer;
     padding:0.2vw 0.4vw;
     color: black;
-    background-color: rgb(69, 246, 243);
-    box-shadow: 0px 0px 0.5vw 0px #242323;
+    border:0.15vw solid #707474;
+    background-color: rgb(109, 109, 241);
+    box-shadow: 0px 0px 0.5vw 0px #464444;
 }
 
 .window-create-new-project .create-submit:hover{
     color: black;
-    background-color: rgb(119, 245, 110);
-    box-shadow: 0px 0px 0.5vw 0.3vw #2df41b;
+    background-color: rgb(223, 150, 80);
+    border:0.15vw solid #ef4f3d;
+    box-shadow: 0px 0px 0.5vw 0.3vw rgb(239, 135, 38);
 }
 
 .window-history{
