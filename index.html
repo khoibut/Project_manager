@@ -11,6 +11,7 @@
     <script src="historyWindow.js" defer></script>
     <script src="dragWindows.js" defer></script>
     <script src="windows.js" defer></script>
+    <script src="imageInput.js" defer></script>
 </head>
 <body>
     <div class="navbar-top">
@@ -45,10 +46,11 @@
                 <i class="fa-solid fa-link"></i>
             </div>
             <div class="add-picture">
-                <h5 class="guide-add-picture">Drag & Drop to Upload Images</h5>
+                <h5 class="guide-add-picture">Drag & Drop to Upload Image</h5>
                 <span>Or</span>
-                <button>Select file</button>
-                <input type="file" hidden>
+                <button data-image-button>Select file</button>
+                <button data-image-button>Select file</button>
+                <input type="file" hidden data-image accept="image/*">
             </div>
         </div>
         <button type="submit" class="create-submit">Create</button>
