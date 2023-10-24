@@ -1,4 +1,6 @@
 function closeProjectWindow(button){
+    document.querySelector(".add-picture").style.background=''
+    document.querySelector("[data-image]").value=''
     button.parentElement.style.display="none"
 }
 function openProjectWindow(button){
