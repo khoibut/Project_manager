@@ -66,16 +66,12 @@ body{
 
 
 .navbar-top a:hover{
-<<<<<<< HEAD
     color: rgb(101, 250, 248);
 }
 
 .nav-bar-setting a:hover{
-    color: rgb(101, 250, 248);;
-=======
-    color: rgb(69, 246, 243);
-    cursor:pointer;
->>>>>>> 8e05b733ed857690999b3346b762f56f243dc058
+    color: rgb(101, 250, 248);
+    cursor: pointer;
 }
 
 .nav-bar-setting a:hover{
