@@ -221,7 +221,10 @@ body{
     position: absolute;
     left:5%;
 }
-
+.add-picture{
+    background-size:contain !important;
+    background-position: center !important;
+}
 .add-picture .guide-add-picture{
     font-size:1.3vw;
 }
