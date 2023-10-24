@@ -86,11 +86,16 @@ body{
 
 
 .navbar-top a:hover{
+<<<<<<< HEAD
     color: rgb(101, 250, 248);
 }
 
 .nav-bar-setting a:hover{
     color: rgb(101, 250, 248);;
+=======
+    color: rgb(69, 246, 243);
+    cursor:pointer;
+>>>>>>> 8e05b733ed857690999b3346b762f56f243dc058
 }
 
 .nav-bar-setting a:hover{
@@ -185,11 +190,14 @@ body{
     outline: none;
     border-color: rgb(69, 246, 243);
 }
-
+.create-project-name-container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
 .window-create-new-project .place-holder{
     position: absolute;
     left: 7%;
-    top: 12.5%;
     font-size: 1.3vw;
     background: transparent;
     pointer-events: none;
@@ -238,18 +246,18 @@ body{
 }
 
 .add-detail .title-add-link{
-    position:absolute;
-    top: 21%;
-    left:6%;
     font-size:1vw;
 }
-
+.project-link-container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
 .window-create-new-project .fa-link{
     color: rgb(69, 246, 243);
     font-size: 1vw;
     position: absolute;
     left:5%;
-    top:26%;
 }
 
 .add-picture .guide-add-picture{
