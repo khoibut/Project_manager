@@ -3,8 +3,10 @@ function closeAllWindows(){
         windows[i].style.display='none'
     }
 }
-let windows=document.querySelectorAll('[data-window]')
-let homeButton=document.querySelector('.Home')
-homeButton.addEventListener("click",function(){
-    closeAllWindows()
-})
+{
+    let windows=document.querySelectorAll('[data-window]')
+    let homeButton=document.querySelector('.Home')
+    homeButton.addEventListener("click",function(){
+        closeAllWindows()
+    })
+}

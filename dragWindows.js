@@ -1,9 +1,9 @@
-function draggableWindow(header){
+function draggableWindow(window){
     function dragMouse(e){
-        header.parentElement.style.zIndex=100
-        for(i=0;i<headers.length;i++){
-            if(headers[i]!=header){
-                headers[i].parentElement.style.zIndex=0
+        window.style.zIndex=100
+        for(i=0;i<windows.length;i++){
+            if(windows[i]!=window){
+                windows[i].style.zIndex=0
             }
         }
         mouseX=e.clientX
@@ -14,8 +14,8 @@ function draggableWindow(header){
     function moveMouse(e){
         mouseMovedX=e.clientX
         mouseMovedY=e.clientY
-        header.parentElement.style.left=header.parentElement.getBoundingClientRect().left+mouseMovedX-mouseX+'px'
-        header.parentElement.style.top=header.parentElement.getBoundingClientRect().top+mouseMovedY-mouseY+'px'
+        window.style.left=window.getBoundingClientRect().left+mouseMovedX-mouseX+'px'
+        window.style.top=window.getBoundingClientRect().top+mouseMovedY-mouseY+'px'
         mouseX=mouseMovedX
         mouseY=mouseMovedY
     }
@@ -27,9 +27,9 @@ function draggableWindow(header){
     var mouseX=0
     var mouseMovedX=0
     var mouseMovedY=0
-    header.onmousedown=dragMouse
+    window.onmousedown=dragMouse
 }
-const headers=document.querySelectorAll('[data-header]')
-for(i=0;i<headers.length;i++){
-    draggableWindow(headers[i])
+const windows=document.querySelectorAll('[data-window]')
+for(i=0;i<windows.length;i++){
+    draggableWindow(windows[i])
 }
