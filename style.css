@@ -32,6 +32,7 @@ body{
     width: 10%;
     text-align: center;
     margin-right: 4vw;
+    cursor: pointer;
 }
 .navbar-top .fa-house{
     color: white;
