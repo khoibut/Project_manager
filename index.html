@@ -14,16 +14,16 @@
 </head>
 <body>
     <div class="navbar-top">
-            <a href="#" class="Home">
+            <a  class="Home">
                 Home
             </a>
             <i class="fa-solid fa-house" ></i>
-            <a href="#" class="History">
+            <a  class="History">
                 History
             </a>
     </div>   
     <div class="nav-bar-setting">
-        <a href="#" class="Setting">
+        <a class="Setting">
             <i class="fa-solid fa-gear" class="Setting-icon"></i>
         </a>
     </div>
@@ -34,12 +34,16 @@
     <div class="window-create-new-project" data-window>
         <h3 class="new-project" data-header>New Project</h3>
         <button class="button-close-window-create-project"><i class="fa-solid fa-xmark close-window-create-project"></i></button>
-        <input type="text" class="project-name"  required>
-        <label class="place-holder">Project Name</label>
+        <div class="create-project-name-container">
+            <input type="text" class="project-name"  required>
+            <label class="place-holder">Project Name</label>
+        </div>
         <div class="add-detail">
-            <input type="url" class="add-link" required>
-            <i class="fa-solid fa-link"></i>
-            <span class="title-add-link">Your Project-link:</span>
+            <div class="title-add-link">Your Project-link:</div>
+            <div class="project-link-container">
+                <input type="url" class="add-link" required>
+                <i class="fa-solid fa-link"></i>
+            </div>
             <div class="add-picture">
                 <h5 class="guide-add-picture">Drag & Drop to Upload Images</h5>
                 <span>Or</span>
@@ -67,7 +71,7 @@
             <template data-project-template>
                 <div class="project">
                     <div class="add-moment">Time</div>
-                    <div class="project-name"><a href="#" class="name">Project name</a></div>
+                    <div class="project-name"><a  class="name">Project name</a></div>
                     <div class="buttons-container">
                         <button class="share" ><i class="fa-solid fa-share"></i></button>
                         <button class="edit"><i class="fa-solid fa-pencil"></i></button>
