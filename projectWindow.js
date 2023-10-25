@@ -25,7 +25,7 @@ function editProject(project){
         submitButton.removeEventListener("click",edit)
     })
 }
-function submitProject(projectName,projectURL,time){
+function submitProject(projectName,projectURL,projectSrc,time){
     historyWindow=document.getElementsByClassName("project-container")[0]
     if(projectName==''||projectURL==''){
         window.alert("DIT ME MAY")
@@ -34,15 +34,17 @@ function submitProject(projectName,projectURL,time){
     template=document.querySelector("[data-project-template]")
     templateContent=template.content.cloneNode(true);
     templateContent.querySelector(".project-name").innerHTML=projectName
-    templateContent.querySelector(".project-name").addEventListener("click",function(){
-        openInfo()
-    })
     templateContent.querySelector(".add-moment").innerHTML=time
     templateContent.querySelector(".edit").addEventListener("click",function(){
         editProject(this.parentElement)
     })
     templateContent.querySelector(".delete").addEventListener("click",function(){
         this.parentElement.parentElement.remove()
+    })
+    templateContent.querySelector("[data-URL]").innerHTML=projectURL
+    templateContent.querySelector("[data-Src]").innerHTML=projectSrc
+    templateContent.querySelector(".project-name").addEventListener("click",function(){
+        openInfo(this.parentElement)
     })
     historyWindow.appendChild(templateContent)
     closeProjectWindow(submitButton)
@@ -59,9 +61,11 @@ let submitButton=document.getElementsByClassName("create-submit")[0];
 submitButton.addEventListener("click",function(){
     today=new Date()
     date=today.getFullYear()+'-'+String((today.getMonth()+1)).padStart(2,'0')+'-'+String(today.getDate()).padStart(2,'0')
-    projectURL=document.getElementsByClassName("add-link")[0]
+    projectSrc=document.getElementsByClassName("add-link")[0]
+    projectURL=document.getElementsByClassName("web-adress")[0]
     projectName=document.getElementsByClassName("project-name")[0]
-    submitProject(projectName.value,projectURL.value,date)
+    submitProject(projectName.value,projectURL.value,projectSrc.value,date)
     projectName.value=''
     projectURL.value=''
+    projectSrc.value=''
 })

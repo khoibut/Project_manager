@@ -527,7 +527,7 @@ select::after{
 .window-information{
     width:47.76%;
     position: absolute;
-    display: grid;
+    display: none;
     left: 25%;
     top:10%;
     border: 0.1vw solid #f53b6d;
