@@ -6,6 +6,7 @@ function closeProjectWindow(button){
 function openProjectWindow(button){
     document.querySelector(".new-project").innerHTML="New Project"
     document.getElementsByClassName("window-create-new-project")[0].style.display="block"
+    onTop(document.getElementsByClassName("window-create-new-project")[0])
 }
 function editProject(project){
     openProjectWindow()
@@ -22,29 +23,22 @@ function editProject(project){
         submitButton.removeEventListener("click",edit)
     })
 }
-function submitProject(){
+function submitProject(projectName,projectURL,time){
     historyWindow=document.getElementsByClassName("project-container")[0]
-    today=new Date()
-    date=today.getFullYear()+'-'+String((today.getMonth()+1)).padStart(2,'0')+'-'+String(today.getDate()).padStart(2,'0')
-    projectURL=document.getElementsByClassName("add-link")[0]
-    projectName=document.getElementsByClassName("project-name")[0]
-    if(projectName.value==''||projectURL.value==''){
+    if(projectName==''||projectURL==''){
         window.alert("DIT ME MAY")
         return
     }
-    time = String(today.getHours()).padStart(2,'0') + ":" + String(today.getMinutes()).padStart(2,'0') + ":" + String(today.getSeconds()).padStart(2,'0')
     template=document.querySelector("[data-project-template]")
     templateContent=template.content.cloneNode(true);
-    templateContent.querySelector(".project-name").innerHTML=projectName.value
-    templateContent.querySelector(".add-moment").innerHTML=date
+    templateContent.querySelector(".project-name").innerHTML=projectName
+    templateContent.querySelector(".add-moment").innerHTML=time
     templateContent.querySelector(".edit").addEventListener("click",function(){
         editProject(this.parentElement)
     })
     templateContent.querySelector(".delete").addEventListener("click",function(){
         this.parentElement.parentElement.remove()
     })
-    projectName.value=''
-    projectURL.value=''
     historyWindow.appendChild(templateContent)
     closeProjectWindow(submitButton)
 }
@@ -57,4 +51,12 @@ openProjectButton.forEach(function(button){
     button.addEventListener("click",openProjectWindow)
 })
 let submitButton=document.getElementsByClassName("create-submit")[0];
-submitButton.addEventListener("click",submitProject)
+submitButton.addEventListener("click",function(){
+    today=new Date()
+    date=today.getFullYear()+'-'+String((today.getMonth()+1)).padStart(2,'0')+'-'+String(today.getDate()).padStart(2,'0')
+    projectURL=document.getElementsByClassName("add-link")[0]
+    projectName=document.getElementsByClassName("project-name")[0]
+    submitProject(projectName.value,projectURL.value,date)
+    projectName.value=''
+    projectURL.value=''
+})

@@ -1,6 +1,6 @@
 function draggableWindow(window){
     function dragMouse(e){
-        window.style.zIndex=100
+        onTop(window)
         for(i=0;i<windows.length;i++){
             if(windows[i]!=window){
                 windows[i].style.zIndex=0
