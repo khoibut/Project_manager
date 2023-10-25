@@ -201,7 +201,7 @@ body{
     border: 0.2vw solid rgb(223, 150, 80);
     padding-top: 1%;
     padding-bottom: 1%;
-    padding-left: 10%;
+    padding-left: 7%;
     border-radius: 2vw;
     color: rgb(223, 150, 80);
 }
@@ -209,6 +209,9 @@ body{
 .add-detail .add-link:focus{
     outline: none;
     border-color: rgb(223, 150, 80);
+}
+.add-link::placeholder{
+    color: rgb(223, 150, 80);
 }
 
 .add-detail .add-picture{
@@ -230,7 +233,7 @@ body{
     margin-left: 1vw;
 }
 
-.project-link-container{
+.source-link-container{
     display:flex;
     flex-direction: row;
     align-items: center;
@@ -240,6 +243,22 @@ body{
     font-size: 1vw;
     position: absolute;
     left:5%;
+}
+.window-create-new-project .web-adress{
+    margin-top: 1vw;
+    width: 100%;
+    background: none;
+    padding:1% 4%;
+    border: 0.2vw solid rgb(223, 150, 80);
+    border-radius: 2vw;
+    color: rgb(223, 150, 80);
+}
+.web-adress::placeholder{
+    color: rgb(223, 150, 80);
+}
+.web-adress:focus{
+    border: 0.2vw solid rgb(223, 150, 80);
+    outline: none;
 }
 .add-picture{
     background-size:contain !important;
@@ -507,7 +526,52 @@ select::after{
 .window-information{
     width:47.76%;
     position: absolute;
-    display: none;
+    display: grid;
+    left: 25%;
+    top:10%;
+    border: 0.1vw solid #f53b6d;
+    border-radius: 2vw;
+    background-image: url(img/de1ddf9ee30e08e15460626b919ef87e\ 1\ \(1\).png);
+    background-size: cover;
+    padding:0 4.53% 0 4.53%;
+    box-shadow: 0 0 1vw 0.3vw rgb(253, 86, 86);
+    grid-template-rows: 26vw 10vw 4vw;
+    grid-template-areas:
+    "pics"
+    "name"
+    "source" ;
+
+}
+.window-information .picture{
+    grid-area:pics;
+    background-color: rgba(255, 255, 255, 0.447);
+    margin-bottom: 6.9%;
+    margin-top: 4%;
+}
+.window-information .project-name{
+    grid-area: name;
+    width: 100%;
+    text-align: center;
+    font-size:4vw;
+    margin-top: 13%;
+    color:#BD4061;
+}
+.window-information {
+    grid-area: link;
+    color: #BD4061;
+    text-align: center;
+    font-size:2.1vw;
+}
+.window-information a{
+    text-decoration: underline;
+}
+.window-information i{
+    font-size:4vw;
+    position: absolute;
+    color:#BD4061;
+    bottom:3%;
+    left:3%;
+    cursor: pointer;
 }
 
 
