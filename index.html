@@ -12,6 +12,7 @@
     <script src="dragWindows.js" defer></script>
     <script src="windows.js" defer></script>
     <script src="imageInput.js" defer></script>
+    <script src="save.js" defer></script>
 </head>
 <body>
     <div class="navbar-top">
@@ -28,9 +29,9 @@
             <i class="fa-solid fa-gear" class="Setting-icon"></i>
         </a>
     </div>
-    <div class="create-newproject" data-create>
+    <div class="create-newproject">
         <h3 class="create-title">CREATE NEW PROJECT</h3>
-        <button class="button-create-newproject"><i class="fa-thin fa-plus"></i></button>
+        <button class="button-create-newproject" data-create><i class="fa-thin fa-plus"></i></button>
     </div>
     <div class="window-create-new-project" data-window>
         <h3 class="new-project" data-header>New Project</h3>
@@ -70,7 +71,7 @@
         </select>
         <div class="project-container">
             <template data-project-template>
-                <div class="project">
+                <div class="project" data-project>
                     <div class="add-moment">Time</div>
                     <div class="project-name"><a  class="name">Project name</a></div>
                     <div class="buttons-container">
