@@ -71,7 +71,8 @@ body{
 }
 
 .nav-bar-setting a:hover{
-    color: rgb(101, 250, 248);;
+    color: rgb(101, 250, 248);
+    cursor: pointer;
 }
 
 .nav-bar-setting a:hover{
@@ -289,12 +290,15 @@ body{
 .window-history{
     display:none;
     position: absolute;
+    background-image: url(img/SEA\ SUNSET\ WALLPAPER\ 4K\ 582023.png);
+    background-size: cover;
+    background-repeat: no-repeat;
     width:60%;
-    background-color: #ABF9F9;
     top:10%;
     left:2%;
     border:2px solid gray;
     grid-template-rows: 10vh 9vh 3.5vh 55.5vh;
+    box-shadow: -0.9vw 1vw 1vw 0.2vw rgba(240, 67, 67, 0.598);
 }
 
 .window-history .title-window-history{
@@ -307,15 +311,16 @@ body{
 }
 
 .title-window-history .title-history{
-    font-size:2vw;
-    color: #605E5E;
+    font-size:2.4vw;
+    color: #f14e31;
+    margin-left: 1vw;
 }
 
 .title-window-history .button-close-window-history{
     outline: none;
     background: none;
     border:none;
-    color: #605E5E;
+    color: #f14e31;
     cursor: pointer;  
 }
 .button-close-window-history i{
@@ -324,7 +329,7 @@ body{
 }
 
 .button-close-window-history i:hover{
-     background-color: rgba(128, 128, 128, 0.299);
+     background-color: #f8f696bb;
      border-radius: 50%;
 }
 
@@ -338,14 +343,14 @@ body{
 }
 
 .search .icon-search{  
-    width:5%;
+    width:7%;
     padding-top: 1.25%;
     padding-bottom: 1.25%;
     background-color: #dcd9d9;
     cursor: pointer;
     border-bottom-left-radius: 20px;
     border-top-left-radius: 20px;
-    border: 1px solid #605E5E;
+    border: 0.12vw solid #5e5757;
     outline: none;
     border-right: none;
 }
@@ -353,25 +358,30 @@ body{
 .search .input-search{
     padding-top: 1.25%;
     padding-bottom: 1.25%;
-    padding-left: 1%;
-    width:30%;
+    padding-left: 1.25%;
+    width:25%;
     background: none;
-    border: 1px solid #605E5E;
-    color: #605E5E;
+    border: 0.12vw solid #605E5E;
+    color: black;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
-    background-color: rgba(0, 255, 255, 0.692);
+    background-color: rgb(252, 114, 83);
+}
+.input-search::placeholder{
+    color: black;
 }
 
 .search .input-search:focus{
-    border: 1px solid #605E5E;
+    border: 0.12vw solid #605E5E;
     outline: none;
+    width: 40%;
+    transition: 0.2s;
 }
 
 .search .window-history-button-create{
     border: none;
     outline: none;
-    color: #605E5E;
+    color: #f14e31;
     background: none;
     cursor:pointer;
     position: absolute;
@@ -386,8 +396,28 @@ body{
 }
 
 .window-history-button-create i:hover{
-    background-color: rgba(128, 128, 128, 0.299);
+    background-color: #f8f696bb;
     border-radius: 50%;
+}
+
+.window-history .dropdown{
+    width:10%;
+    margin-left: 86%;
+    background-color: #c2c2c2;
+    border: 0.1vw solid rgb(110, 106, 106);
+    border-top: none;
+    position: relative;
+}
+
+select::after{
+    text-align: left;
+}
+
+.dropdown option::after{
+    border-radius: 0;
+    text-align: left;
+    border: 0.1vw solid rgb(110, 106, 106);
+    border-top:none ;
 }
 
 .window-history .project{
@@ -403,10 +433,32 @@ body{
     border: 1px solid black;
     align-items: center;
 }
+.window-history .project-container{
+    overflow: auto;
+}
+::-webkit-scrollbar {
+    width: 0.8vw;
+    border: 0.1vw solid rgb(108, 106, 106);
+    border-radius: 0.5vw;
 
+}
+  
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    border-radius: 0.5vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #f14e31; 
+    border-radius: 10px;
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #f14e31; 
+}
 .project .add-moment{
     background-color: #dcd9d9;
-    border-right:1px solid black;
+    border-right:0.1vw solid black;
     width: 17%;
     border-top-left-radius: 14px;
     border-bottom-left-radius: 14px;
@@ -425,16 +477,18 @@ body{
 }
 .project .project-name{
     width:60%;
-    background-color: #def5f5;
+    background-color: rgb(252, 114, 83);
     text-align: center;
-    border: 1px solid #1fb3b3;
+    border: 0.12vw solid #fa1e01;
     border-radius:20px;
-    padding-top: 0.5%;
-    padding-bottom: 0.5%;
+    padding-top: 0.3%;
+    padding-bottom: 0.3%;
+    margin:0 1vw;
 }
+
 .buttons-container{
     position: absolute;
-    right:2%;
+    right:1%;
     display:flex;
     width:20%;
     justify-content: space-around;
@@ -449,6 +503,10 @@ body{
     color: #2878f0;
 }
 
-
+.window-information{
+    width:47.76%;
+    position: absolute;
+    display: none;
+}
 
 
