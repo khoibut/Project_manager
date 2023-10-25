@@ -496,6 +496,7 @@ select::after{
     z-index: 10;
 }
 .project .project-name{
+    cursor: pointer;
     width:60%;
     background-color: rgb(252, 114, 83);
     text-align: center;

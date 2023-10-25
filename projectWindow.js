@@ -34,6 +34,9 @@ function submitProject(projectName,projectURL,time){
     template=document.querySelector("[data-project-template]")
     templateContent=template.content.cloneNode(true);
     templateContent.querySelector(".project-name").innerHTML=projectName
+    templateContent.querySelector(".project-name").addEventListener("click",function(){
+        openInfo()
+    })
     templateContent.querySelector(".add-moment").innerHTML=time
     templateContent.querySelector(".edit").addEventListener("click",function(){
         editProject(this.parentElement)
