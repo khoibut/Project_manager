@@ -7,6 +7,8 @@ function openProjectWindow(button){
     document.querySelector(".new-project").innerHTML="New Project"
     document.getElementsByClassName("window-create-new-project")[0].style.display="block"
     onTop(document.getElementsByClassName("window-create-new-project")[0])
+    document.getElementsByClassName("window-create-new-project")[0].style.left=''
+    document.getElementsByClassName("window-create-new-project")[0].style.top=''
 }
 function editProject(project){
     openProjectWindow()
