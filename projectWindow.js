@@ -6,6 +6,8 @@ function closeProjectWindow(button){
 function openProjectWindow(button){
     document.querySelector(".new-project").innerHTML="New Project"
     document.getElementsByClassName("window-create-new-project")[0].style.display="block"
+    document.getElementsByClassName("window-create-new-project")[0].style.left=''
+    document.getElementsByClassName("window-create-new-project")[0].style.top=''
 }
 function editProject(project){
     openProjectWindow()
@@ -32,7 +34,6 @@ function submitProject(){
         window.alert("DIT ME MAY")
         return
     }
-    time = String(today.getHours()).padStart(2,'0') + ":" + String(today.getMinutes()).padStart(2,'0') + ":" + String(today.getSeconds()).padStart(2,'0')
     template=document.querySelector("[data-project-template]")
     templateContent=template.content.cloneNode(true);
     templateContent.querySelector(".project-name").innerHTML=projectName.value
