@@ -574,4 +574,11 @@ select::after{
     cursor: pointer;
 }
 
+.logo{
+    position: absolute;
+    left:3%;
+    bottom:8%;
+    width:5%;
+    height:8%;
+}
 
