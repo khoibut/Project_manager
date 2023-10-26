@@ -11,6 +11,7 @@
     <script src="projectWindow.js" defer></script>
     <script src="historyWindow.js" defer></script>
     <script src="dragWindows.js" defer></script>
+    <script src="infoWindow.js" defer></script>
     <script src="windows.js" defer></script>
     <script src="imageInput.js" defer></script>
     <script src="save.js" defer></script>
@@ -85,17 +86,20 @@
                         <button class="edit"><i class="fa-solid fa-pencil"></i></button>
                         <button class="delete"><i class="fa-solid fa-trash"></i></button>
                     </div>
+                    <div data-URL hidden></div>
+                    <div data-Src hidden></div>
+                    <div data-display hidden></div>
                 </div>
             </template>
         </div>
     </div>
-    <div class="window-information">
-        <div class="project-name-info">Project Name</div>
+    <div class="window-information" data-window>
+        <div class="project-name">Project Name</div>
         <div class="project-link">
-            <a class="link">link</a>
+            <a class="link" target="_blank">Source</a>
         </div>
         <div class="picture"></div>
-        <i class="fa-solid fa-arrow-left"></i>
+        <i class="fa-solid fa-arrow-left" data-button></i>
     </div>
     <div class="logo">
         <img src="img/Component 1.png">

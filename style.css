@@ -539,6 +539,7 @@ select::after{
 }
 
 .project .project-name{
+    cursor: pointer;
     width:60%;
     background-color: rgb(252, 114, 83);
     text-align: center;
@@ -564,7 +565,7 @@ select::after{
 .window-information{
     width:47.76%;
     position: absolute;
-    display: grid;
+    display: none;
     left: 25%;
     top:10%;
     border: 0.1vw solid #f53b6d;
@@ -583,6 +584,8 @@ select::after{
 .window-information .picture{
     grid-area:pics;
     background-color: rgba(255, 255, 255, 0.447);
+    background-position: center !important;
+    background-size: contain !important;
     margin-bottom: 6.9%;
     margin-top: 4%;
     border: 0.1vw solid rgba(240, 67, 67, 0.922);

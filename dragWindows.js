@@ -1,11 +1,6 @@
 function draggableWindow(window){
     function dragMouse(e){
         onTop(window)
-        for(i=0;i<windows.length;i++){
-            if(windows[i]!=window){
-                windows[i].style.zIndex=0
-            }
-        }
         mouseX=e.clientX
         mouseY=e.clientY
         document.onmousemove=moveMouse

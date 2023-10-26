@@ -15,7 +15,7 @@ document.ondragenter=function(e){
 }
 document.ondragover=function(e){
     if(!dropZone){
-        imageDrop.style.border="0.25vw dashed #f6e945"
+        imageDrop.style.border="0.25vw dashed #F4FF89"
     }
     e.preventDefault()
 }
@@ -35,5 +35,5 @@ imageDrop.ondrop=function(e){
 document.ondrop=function(e){
     dropZone=false
     e.preventDefault()
-    imageDrop.style.border="0.25vw dashed rgb(69, 246, 243)"
+    imageDrop.style.border="0.25vw dashed rgb(223, 150, 80)"
 }

@@ -1,6 +1,8 @@
 function closeAllWindows(){
     for(i=0;i<windows.length;i++){
         windows[i].style.display='none'
+        windows[i].style.left=''
+        windows[i].style.top=''
     }
 }
 function onTop(window){
