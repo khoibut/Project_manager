@@ -546,6 +546,8 @@ select::after{
 .window-information .picture{
     grid-area:pics;
     background-color: rgba(255, 255, 255, 0.447);
+    background-position: center !important;
+    background-size: contain !important;
     margin-bottom: 6.9%;
     margin-top: 4%;
 }
@@ -574,5 +576,3 @@ select::after{
     left:3%;
     cursor: pointer;
 }
-
-
