@@ -38,8 +38,8 @@
         <h3 class="new-project" data-header>New Project</h3>
         <button class="button-close-window-create-project"><i class="fa-solid fa-xmark close-window-create-project"></i></button>
         <div class="create-project-name-container">
-            <input type="text" class="project-name"  required>
-            <label class="place-holder">Project Name</label>
+            <input type="text" class="project-name-create"  required>
+            <span class="place-holder">Project Name</span>
         </div>
         <div class="add-detail">
             <div class="title-add-link">Source link:</div>
@@ -47,7 +47,11 @@
                 <input type="url" class="add-link" required placeholder="Source URL">
                 <i class="fa-solid fa-link"></i>
             </div>
-            <input type="url" class="web-adress" required placeholder="Web adress">
+            <div class="space"></div>
+            <div class="web-adress-container">
+                <input type="url" class="web-adress" required placeholder="Web adress">
+                <i class="fa-solid fa-globe"></i>
+            </div>
             <div class="add-picture">
                 <h5 class="guide-add-picture">Drag & Drop to Upload Images</h5>
                 <span class="choose">Or</span>
@@ -86,7 +90,7 @@
         </div>
     </div>
     <div class="window-information">
-        <div class="project-name">Project Name</div>
+        <div class="project-name-info">Project Name</div>
         <div class="project-link">
             <a class="link">link</a>
         </div>

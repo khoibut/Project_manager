@@ -25,6 +25,7 @@ body{
     margin-right: 73.8vw;
     box-shadow: 0 0.5vw 0.9vw 0 rgb(143, 175, 243);
 }
+
 .navbar-top a {
     text-decoration: none;
     font-size:2vw;
@@ -34,6 +35,7 @@ body{
     margin-right: 4vw;
     cursor: pointer;
 }
+
 .navbar-top .fa-house{
     color: white;
     font-size: 1.4vw;
@@ -41,6 +43,7 @@ body{
     width: 1,4vw;
     margin-right:2vw;
 }
+
 .navbar-top .History{
     margin-right: 1vw;
 }
@@ -64,7 +67,6 @@ body{
     width: 10%;
     text-align: center;
 }
-
 
 .navbar-top a:hover{
     color: rgb(101, 250, 248);
@@ -104,6 +106,7 @@ body{
     transform: translateX(-50%) translateY(-50%);
     border:0.1vw solid rgb(133, 129, 129);
     cursor: pointer;
+    transition: all 0.2s ;
     box-shadow: 0 0 1vw 0.2vw black;
 }
 
@@ -133,7 +136,7 @@ body{
     top: 10%;
     left: 32%; 
     border: 0.2vw solid rgb(87, 178, 235);
-    box-shadow: -1vw 1vw 1vw 0.1vw #2cedf4;
+    box-shadow: -1vw 1vw 1vw 0.1vw #135976;
     color: rgb(223, 150, 80);
     padding:0 1vw 4vw 1vw;
     display: none;
@@ -157,7 +160,7 @@ body{
     cursor: pointer;
 }
 
-.window-create-new-project .project-name{
+.window-create-new-project .project-name-create{
     width: 100%;
     border: 0.15vw solid rgb(223, 150, 80);
     border-radius: 2vw;
@@ -166,7 +169,7 @@ body{
     color: rgb(223, 150, 80);
     padding: 0.4vw 1.3vw;
 }
-.window-create-new-project .project-name:focus{
+.window-create-new-project .project-name-create:focus{
     outline: none;
     border-color: rgb(223, 150, 80);
 }
@@ -183,12 +186,15 @@ body{
     pointer-events: none;
     transition: 0.5s;
     color: rgb(223, 150, 80);
+    transition: 0.25s ;
 }
-.window-create-new-project input:valid ~ label,
-.window-create-new-project input:focus ~ label
+.window-create-new-project input:valid ~ span,
+.window-create-new-project input:focus ~ span
 {
     font-size: 0.9vw;
-    transform: translateY(-1.7vw);
+    transform: translateY(-1.2vw) translateX(0.3vw);
+    background-color: #000f2e;
+    padding:0 0.3vw;
 }
 
 .window-create-new-project .add-detail{
@@ -198,10 +204,8 @@ body{
 .add-detail .add-link{
     width:100%;
     background: none;
-    border: 0.2vw solid rgb(223, 150, 80);
-    padding-top: 1%;
-    padding-bottom: 1%;
-    padding-left: 7%;
+    border: 0.15vw solid rgb(223, 150, 80);
+    padding:1% 7%;
     border-radius: 2vw;
     color: rgb(223, 150, 80);
 }
@@ -213,7 +217,11 @@ body{
 .add-link::placeholder{
     color: rgb(223, 150, 80);
 }
+.window-create-new-project .space{
+    width: 100%;
+        margin:0.5vw 0;
 
+}
 .add-detail .add-picture{
     border:0.25vw dashed rgb(223, 150, 80);
     width:100%;
@@ -238,6 +246,18 @@ body{
     flex-direction: row;
     align-items: center;
 }
+
+.web-adress-container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+}
+.window-create-new-project .fa-globe{
+    color: rgb(223, 150, 80);
+    font-size: 1vw;
+    position: absolute;
+    left:5%;
+}
 .window-create-new-project .fa-link{
     color: rgb(223, 150, 80);
     font-size: 1vw;
@@ -245,11 +265,11 @@ body{
     left:5%;
 }
 .window-create-new-project .web-adress{
-    margin-top: 1vw;
+    margin-top:0;
     width: 100%;
     background: none;
-    padding:1% 4%;
-    border: 0.2vw solid rgb(223, 150, 80);
+    padding:1% 7%;
+    border: 0.15vw solid rgb(223, 150, 80);
     border-radius: 2vw;
     color: rgb(223, 150, 80);
 }
@@ -257,7 +277,7 @@ body{
     color: rgb(223, 150, 80);
 }
 .web-adress:focus{
-    border: 0.2vw solid rgb(223, 150, 80);
+    border: 0.15vw solid rgb(223, 150, 80);
     outline: none;
 }
 .add-picture{
@@ -297,6 +317,7 @@ body{
     border:0.15vw solid #707474;
     background-color: rgb(109, 109, 241);
     box-shadow: 0px 0px 0.5vw 0px #464444;
+    transition: all 0.25s linear;
 }
 
 .window-create-new-project .create-submit:hover{
@@ -340,7 +361,7 @@ body{
     outline: none;
     background: none;
     border:none;
-    color: #f14e31;
+    color: black;
     cursor: pointer;  
 }
 .button-close-window-history i{
@@ -349,8 +370,9 @@ body{
 }
 
 .button-close-window-history i:hover{
-     background-color: #f8f696bb;
-     border-radius: 50%;
+    background-color: white;
+    color:rgb(253, 86, 86);
+    border-radius: 50%;
 }
 
 .search{
@@ -383,9 +405,11 @@ body{
     background: none;
     border: 0.12vw solid #605E5E;
     color: black;
+    text-overflow: ellipsis;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     background-color: rgb(252, 114, 83);
+    transition: 0.25s linear;
 }
 .input-search::placeholder{
     color: black;
@@ -401,7 +425,7 @@ body{
 .search .window-history-button-create{
     border: none;
     outline: none;
-    color: #f14e31;
+    color: black;
     background: none;
     cursor:pointer;
     position: absolute;
@@ -416,7 +440,8 @@ body{
 }
 
 .window-history-button-create i:hover{
-    background-color: #f8f696bb;
+    background-color: white;
+    color:rgb(253, 86, 86);
     border-radius: 50%;
 }
 
@@ -453,9 +478,11 @@ select::after{
     border: 1px solid black;
     align-items: center;
 }
+
 .window-history .project-container{
     overflow: auto;
 }
+
 ::-webkit-scrollbar {
     width: 0.8vw;
     border: 0.1vw solid rgb(108, 106, 106);
@@ -494,7 +521,23 @@ select::after{
     cursor: pointer;
     font-size:1.2vw;
     z-index: 10;
+    transition: background-color 0.25s,color 0;
+    border-radius: 50%;
 }
+
+.project button:hover{
+    background-color: rgb(252, 114, 83);
+    color:white;
+}
+
+.buttons-container{
+    position: absolute;
+    right:0%;
+    display:flex;
+    width:20%;
+    justify-content: space-around;
+}
+
 .project .project-name{
     width:60%;
     background-color: rgb(252, 114, 83);
@@ -504,23 +547,18 @@ select::after{
     padding-top: 0.3%;
     padding-bottom: 0.3%;
     margin:0 1vw;
+    transition:0,2s;
 }
 
-.buttons-container{
-    position: absolute;
-    right:1%;
-    display:flex;
-    width:20%;
-    justify-content: space-around;
-}
 .project-name .name{
     text-decoration: none;
     color: black;
 }
 
-.project-name .name:hover{
-    text-decoration: underline #2878f0;
-    color: #2878f0;
+.project-name:hover{
+    text-decoration: underline white;
+    color: white;
+    cursor: pointer;
 }
 
 .window-information{
@@ -540,15 +578,17 @@ select::after{
     "pics"
     "name"
     "source" ;
-
+    display: non;
 }
 .window-information .picture{
     grid-area:pics;
     background-color: rgba(255, 255, 255, 0.447);
     margin-bottom: 6.9%;
     margin-top: 4%;
+    border: 0.1vw solid rgba(240, 67, 67, 0.922);
 }
-.window-information .project-name{
+
+.window-information .project-name-info{
     grid-area: name;
     width: 100%;
     text-align: center;
@@ -556,29 +596,43 @@ select::after{
     margin-top: 13%;
     color:#BD4061;
 }
+
 .window-information {
     grid-area: link;
     color: #BD4061;
     text-align: center;
     font-size:2.1vw;
 }
+
 .window-information a{
-    text-decoration: underline;
+    text-decoration: none;
+    transition: 0.1s;
 }
+
+.window-information a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .window-information i{
     font-size:4vw;
     position: absolute;
-    color:#BD4061;
+    color:white;
     bottom:3%;
-    left:3%;
+    left:7%;
     cursor: pointer;
+    transition: 0.25s;
+}
+
+.window-information i:hover{
+    transform: translateX(-1vw);
+    color: #BD4061;
 }
 
 .logo{
     position: absolute;
     left:3%;
-    bottom:8%;
-    width:5%;
-    height:8%;
+    bottom:0%;
 }
+
 
