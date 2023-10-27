@@ -34,8 +34,8 @@ function editProject(project){
             project.querySelector("[data-display]").innerHTML=document.querySelector(".add-picture").style.background
         }
         closeProjectWindow(submitButton)
-        submitButton.removeEventListener("click",edit)
         submitButton.addEventListener("click",cockball)
+        submitButton.removeEventListener("click",edit)
     })
 }
 function submitProject(projectName,projectURL,projectSrc,projectImage,time){
