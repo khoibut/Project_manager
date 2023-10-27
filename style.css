@@ -160,7 +160,7 @@ body{
     cursor: pointer;
 }
 
-.window-create-new-project .project-name-create{
+.window-create-new-project .project-name{
     width: 100%;
     border: 0.15vw solid rgb(223, 150, 80);
     border-radius: 2vw;
@@ -169,7 +169,7 @@ body{
     color: rgb(223, 150, 80);
     padding: 0.4vw 1.3vw;
 }
-.window-create-new-project .project-name-create:focus{
+.window-create-new-project .project-name:focus{
     outline: none;
     border-color: rgb(223, 150, 80);
 }
@@ -539,6 +539,7 @@ select::after{
 }
 
 .project .project-name{
+    cursor: pointer;
     width:60%;
     background-color: rgb(252, 114, 83);
     text-align: center;
@@ -564,7 +565,7 @@ select::after{
 .window-information{
     width:47.76%;
     position: absolute;
-    display: grid;
+    display: none;
     left: 25%;
     top:10%;
     border: 0.1vw solid #f53b6d;
@@ -583,12 +584,14 @@ select::after{
 .window-information .picture{
     grid-area:pics;
     background-color: rgba(255, 255, 255, 0.447);
+    background-position: center !important;
+    background-size: contain !important;
     margin-bottom: 6.9%;
     margin-top: 4%;
     border: 0.1vw solid rgba(240, 67, 67, 0.922);
 }
 
-.window-information .project-name-info{
+.window-information .project-name{
     grid-area: name;
     width: 100%;
     text-align: center;
