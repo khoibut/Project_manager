@@ -25,7 +25,7 @@ function editProject(project){
             project.querySelector("[data-src]").innerHTML=document.getElementsByClassName("add-link")[0].value
         }
         if(document.querySelector(".web-adress").value!=''){
-            project.querySelector("[data-url]")=document.querySelector(".web-adress").value
+            project.querySelector("[data-url]").innerHTML=document.querySelector(".web-adress").value
         }
         if(document.querySelector(".web-adress").value!=''){
             project.querySelector("[data-url]")=document.querySelector(".web-adress").value
@@ -35,6 +35,7 @@ function editProject(project){
         }
         closeProjectWindow(submitButton)
         submitButton.removeEventListener("click",edit)
+        submitButton.addEventListener("click",cockball)
     })
 }
 function submitProject(projectName,projectURL,projectSrc,projectImage,time){

@@ -160,7 +160,7 @@ body{
     cursor: pointer;
 }
 
-.window-create-new-project .project-name-create{
+.window-create-new-project .project-name{
     width: 100%;
     border: 0.15vw solid rgb(223, 150, 80);
     border-radius: 2vw;
@@ -169,7 +169,7 @@ body{
     color: rgb(223, 150, 80);
     padding: 0.4vw 1.3vw;
 }
-.window-create-new-project .project-name-create:focus{
+.window-create-new-project .project-name:focus{
     outline: none;
     border-color: rgb(223, 150, 80);
 }
@@ -556,7 +556,7 @@ select::after{
     color: black;
 }
 
-.project-name:hover{
+.window-information .project-name:hover{
     text-decoration: underline white;
     color: white;
     cursor: pointer;
