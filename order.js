@@ -1,0 +1,49 @@
+function latest(){
+    projects=Array.from(document.querySelectorAll("[data-project]"))
+    nodes=document.querySelectorAll("[data-project]")
+    for(i=0;i<nodes.length;i++){
+        nodes[i].remove()
+    }
+    for(i=0;i<projects.length;i++){
+        for(j=0;j<projects.length;j++){
+            if(new Date(projects[i].querySelector(".add-moment").innerHTML)>new Date(projects[j].querySelector(".add-moment").innerHTML)){
+                temp=projects[i];
+                projects[i]=projects[j];
+                projects[j]=temp;
+            }
+        }
+    }
+    for(i=0;i<projects.length;i++){
+        document.querySelector(".project-container").appendChild(projects[i])
+    }
+}
+function oldest(){
+    projects=Array.from(document.querySelectorAll("[data-project]"))
+    nodes=document.querySelectorAll("[data-project]")
+    for(i=0;i<nodes.length;i++){
+        nodes[i].remove()
+    }
+    for(i=0;i<projects.length;i++){
+        for(j=0;j<projects.length;j++){
+            if(new Date(projects[i].querySelector(".add-moment").innerHTML)<new Date(projects[j].querySelector(".add-moment").innerHTML)){
+                temp=projects[i];
+                projects[i]=projects[j];
+                projects[j]=temp;
+            }
+        }
+    }
+    for(i=0;i<projects.length;i++){
+        document.querySelector(".project-container").appendChild(projects[i])
+    }
+}
+{
+    latest()
+    order=document.querySelector("[data-order]")
+    order.onchange=function(){
+        if(order.value=="Latest"){
+            latest()
+        }else{
+            oldest()
+        }
+    }
+}
