@@ -556,7 +556,7 @@ select::after{
     color: black;
 }
 
-.window-information .project-name:hover{
+.project .project-name:hover{
     text-decoration: underline white;
     color: white;
     cursor: pointer;
