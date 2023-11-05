@@ -4,29 +4,39 @@
     user-select: none;
 }
 body{
+    min-width:100%;
+    min-height:100vh;
     overflow: hidden;
     background-image: url(img/c540018ca1c7b93cb1fbc218ea0c73a7.png);
     background-repeat:no-repeat ;
     background-size: cover;
-
+    background-position: center;
+    display:grid;
+    grid-template-rows: 7% 35% 40% 18%;
+    grid-template-columns: 40% 20% 40%;
+}
+.top_nav{
+    grid-column:1/4 ;
+    grid-row: 1/2;
+    display: flex;
+    justify-content: space-between;
+    margin-top:0.2em;
 }
 
-.navbar-top{
+.navbar-items{
+    max-width:23%;
     background-color:none;
     border-top-right-radius: 3vw;
     border-bottom-right-radius:3vw;
     border: 0.1vw solid rgb(135, 183, 179);
-    margin-top: 0.2vw;
-    padding: 0.3% 6% 0.3% 2%;
+    padding: 0.3% 0 0.3% 2%;
     display: inline-flex;
     align-items: center;
     justify-content: flex-start;
-    width:20%;
-    margin-right: 73.8vw;
     box-shadow: 0 0.5vw 0.9vw 0 rgb(143, 175, 243);
 }
 
-.navbar-top a {
+.navbar-items a {
     text-decoration: none;
     font-size:2vw;
     color: white;
@@ -36,26 +46,28 @@ body{
     cursor: pointer;
 }
 
-.navbar-top .fa-house{
+.navbar-items .fa-house{
     color: white;
     font-size: 1.4vw;
-    padding:0 0.4vw;
+    padding:0 0;
     width: 1,4vw;
     margin-right:2vw;
 }
 
-.navbar-top .History{
+.navbar-items .History{
     margin-right: 1vw;
 }
 
 .nav-bar-setting  {
-    display: inline;
-    max-width:5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width:3%;
     text-align: center;
     background-color: none;
     border-top-left-radius: 3vw;
     border-bottom-left-radius:3vw;
-    padding: 1.3% 1.6% 0.5% 2%;
+    padding: 0 3% 0 2%;
     border: 0.1vw solid rgb(135, 183, 179);
     box-shadow: 0 0.5vw 0.9vw 0 rgb(143, 175, 243);
 }
@@ -64,7 +76,7 @@ body{
     text-decoration: none;
     font-size:2vw;
     color: white;
-    width: 10%;
+    width: 5%;
     text-align: center;
 }
 
@@ -82,28 +94,23 @@ body{
 }
 
 .create-newproject{
+    grid-column: 2/3;
+    grid-row: 3/4;
     position: relative;
     outline: none;
     background: none;
-    padding: 40% 50% 0 50%;
-}
-
-.create-newproject .create-title{
-    position: absolute;
-    padding-top:4.5%;
-    font-size:1.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .create-newproject .button-create-newproject{
-    position: absolute;
     background: none;
     color: rgb(133, 129, 129);
-    width: 14.2%;
+    width: 80%;
     border-radius: 50%;
-    left: 50%;
-    top: 80%;
-    padding: 3% 0;
-    transform: translateX(-50%) translateY(-50%);
+    padding: 20% 20%;
     border:0.1vw solid rgb(133, 129, 129);
     cursor: pointer;
     transition: all 0.2s ;
@@ -121,10 +128,8 @@ body{
 }
 
 .create-newproject .create-title{
-    position: absolute;
-    left: 50%;
-    top: 40%;
-    transform: translateX(-50%);
+    font-size:1.6vw;
+    margin-top:0;
 }
 
 .window-create-new-project{
@@ -192,7 +197,7 @@ body{
 .window-create-new-project input:focus ~ span
 {
     font-size: 0.9vw;
-    transform: translateY(-1.2vw) translateX(0.3vw);
+    transform: translateY(-120%) translateX(0.3vw);
     background-color: #000f2e;
     padding:0 0.3vw;
 }
@@ -216,6 +221,7 @@ body{
 }
 .add-link::placeholder{
     color: rgb(223, 150, 80);
+    font-size:1.3vw;
 }
 .window-create-new-project .space{
     width: 100%;
@@ -275,6 +281,7 @@ body{
 }
 .web-adress::placeholder{
     color: rgb(223, 150, 80);
+    font-size: 1.3vw;
 }
 .web-adress:focus{
     border: 0.15vw solid rgb(223, 150, 80);
@@ -579,7 +586,6 @@ select::after{
     "pics"
     "name"
     "source" ;
-    display: non;
 }
 .window-information .picture{
     grid-area:pics;
@@ -633,9 +639,81 @@ select::after{
 }
 
 .logo{
-    position: absolute;
-    left:3%;
-    bottom:0%;
+    grid-column:1/2;
+    grid-row:4/5;
+    width:20%;
+    margin-left:10%;
+    display: block;
+    background-image: url('img/Component\ 1.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
+@media (min-width:26.6875em) and (max-width:48em){
+    body{
+        display: grid;
+        grid-template-rows:7% 35% 40% 1fr;
+        grid-template-columns: 35% 30% 35%;
+    }
+    .top_nav a{
+        font-size:3vw;
+    }
+    .navbar-items .fa-house{
+        font-size: 2.4vw;
+        margin-left:2vw;
+    }
+    .navbar-items{
+        min-width:30%;
+        justify-content: flex-start;
+        padding-left: 2%;
+    }
+    .nav-bar-setting{
+        min-width:8%;
+    }
+    .create-newproject .button-create-newproject{
+        padding:27% 20%;
+        width:80%;
+    }
+    .create-newproject .create-title{
+        font-size:min(1em,80%);
+    }
+    .window-create-new-project h3{
+        font-size:2.5vw;
+    }
+    .create-project-name-container .place-holder{
+        font-size: 1.5vw;
+    }
+    .add-detail input::placeholder{
+        font-size:1.5vw;
+    }
+    .create-project-name-container input:valid~span,
+    .create-project-name-container input:focus~span
+    {
+        transform: translateY(-160%);
+    }
+    .logo{
+        width:30%;
+    }
+}
+@media (max-width:26.625em){
+    body{
+        display: grid;
+        grid-template-rows:10% 50% 30% 10%;
+        grid-template-columns: 35% 30% 35%;
+    }
+    .create-newproject .button-create-newproject{
+        padding:25% 20%;
+        width:80%;
+    }
+    .create-project-name-container int
+    .create-newproject .create-title{
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+    .top_nav{
+        display:none;
+    }
+}
 
